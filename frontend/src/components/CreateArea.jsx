@@ -24,7 +24,7 @@ function CreateArea(props) {
 
   function submitNote(event) {
     
-    fetch("http://localhost:3001/",{
+    fetch("https://keeper-app-backend-99py.onrender.com/",{
       method:"POST",
       headers: {
         "Content-Type": "application/json",

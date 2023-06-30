@@ -5,14 +5,14 @@ function Note(props) {
   const[note,setNote]=useState();
 
   function handleDel(id) {
-    fetch(`http://localhost:3001/${id}`, {
+    fetch(`https://keeper-app-backend-99py.onrender.com/${id}`, {
       method: "DELETE",
     }).then((res)=>res.json())
     .catch(err=>console.log(err,"delete error in frontend"));
   }
 
   function getData(){
-    fetch("http://localhost:3001/")
+    fetch(`https://keeper-app-backend-99py.onrender.com/`)
     .then((res)=>res.json())
     .then((data)=>setNote(data))
     .catch(err=>console.log(err,"get error in frontend"))
